@@ -24,7 +24,7 @@ export class FuiAccordion implements AfterContentInit {
   @HostBinding('class.accordion')
   public readonly hasClasses: boolean;
   protected _service: FuiAccordionService;
-  @ContentChildren(FuiAccordionPanel)
+  @ContentChildren(FuiAccordionPanel, {descendants: true})
   protected _panels: QueryList<FuiAccordionPanel>;
 
   constructor() {
